@@ -30,13 +30,7 @@ function App() {
         </Switch>
       </Layout2> */}
       </div>
-      <button
-        onClick={() => {
-          console.log(store.getState());
-        }}
-      >
-        Click me
-      </button>
+
     </>
   );
 }
