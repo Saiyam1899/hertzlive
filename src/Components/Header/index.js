@@ -318,7 +318,7 @@ class Header extends Component {
 function ConnectModal(props) {
   return (
     <>
-      <div
+           <div
         class="modal fade"
         id="ConnectModal"
         tabindex="-1"
@@ -331,7 +331,7 @@ function ConnectModal(props) {
             class="modal-content"
             style={{
               background: "#0053ac",
-              padding: "10px 0px",
+              padding: "10px 0px 0px 0px",
               borderRadius: "23px",
               color: "#fff",
 
@@ -341,14 +341,14 @@ function ConnectModal(props) {
             <div class="modal-header" style={{ display: "flex" }}>
               <span style={{ margin: "0 auto" }}>
                 <h5 class="modal-title-center" id="exampleModalLongTitle">
-                  Connect wallet
+                  Connect Wallet
                 </h5>
               </span>
               <span>
                 <MdOutlineCancel
                   data-dismiss="modal"
                   aria-label="Close"
-                  size={20}
+                  size={30}
                   color={"#6698CD"}
                 >
                   <span aria-hidden="true">&times;</span>
@@ -357,64 +357,62 @@ function ConnectModal(props) {
             </div>
 
             <div class="modal-body">
-              <div class="">
-                <HButton
-                  type="button"
-                  data-toggle="modal"
-                  data-dismiss="modal"
-                  data-target="#HertzModalCenter"
-                >
-                  <span>Hertz Network</span>
-                  <span class="d-grid">
-                    <img
-                      src="https://ramlogics.com/Defi_Hertz/wp-content/themes/twentytwenty/assets/images/HTZ-ERC-20-NEW.png"
-                      class=""
-                      alt="eth.png"
-                      style={{ width: "32px" }}
-                    ></img>
-                  </span>
-                </HButton>
-              </div>
-              <div class="py-2">
-                <HButton
-                  type="button"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenterLonin"
-                  onClick={props.SetContract}
-                  data-dismiss="modal"
-                >
-                  <span>MetaMask</span>
-                  <span class="d-grid">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL + "/assets/images/metamask.png"
-                      }
-                      class=""
-                      alt="eth.png"
-                      style={{ width: "32px" }}
-                    ></img>
-                  </span>
-                </HButton>
-              </div>
-              <div class="py-2">
-                <HButton
-                  type="button"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenterLonin"
-                >
-                  <span>Wallet Connect</span>
-                  <span class="d-grid">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/assets/images/walletconnect.png"
-                      }
-                      alt="eth.png"
-                      style={{ width: "32px", borderRadius: "999px" }}
-                    ></img>
-                  </span>
-                </HButton>
-              </div>
+              <HButton
+                type="button"
+                data-toggle="modal"
+                data-dismiss="modal"
+                className="btn btn_metamask w-100 my-3"
+                data-target="#HertzModalCenter"
+              >
+                <span>Hertz Network</span>
+                <span class="d-grid">
+                  <img
+                    src="https://ramlogics.com/Defi_Hertz/wp-content/themes/twentytwenty/assets/images/HTZ-ERC-20-NEW.png"
+                    class=""
+                    alt="eth.png"
+                    style={{ width: "32px" }}
+                  ></img>
+                </span>
+              </HButton>
+
+              <HButton
+                type="button"
+                data-toggle="modal"
+                data-target="#exampleModalCenterLonin"
+                onClick={props.SetContract}
+                className="btn btn_metamask w-100 my-3"
+                data-dismiss="modal"
+              >
+                <span>MetaMask</span>
+                <span class="d-grid">
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/images/metamask.png"}
+                    class=""
+                    alt="eth.png"
+                    style={{ width: "32px" }}
+                  ></img>
+                </span>
+              </HButton>
+
+              <HButton
+                type="button"
+                data-toggle="modal"
+                data-target="#exampleModalCenterLonin"
+                className="btn btn_metamask w-100 my-3"
+                onClick
+              >
+                <span>Wallet Connect</span>
+                <span class="d-grid">
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/assets/images/walletconnect.png"
+                    }
+                    alt="eth.png"
+                    style={{ width: "32px", borderRadius: "999px" }}
+                  ></img>
+                </span>
+              </HButton>
             </div>
           </div>
         </div>
@@ -669,7 +667,7 @@ const HButton = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+
   transition: 0.2s;
   border: none;
   font-weight: bold;
