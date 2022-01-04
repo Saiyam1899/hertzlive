@@ -357,7 +357,7 @@ function ConnectModal(props) {
             </div>
 
             <div class="modal-body">
-              <HButton
+              <button
                 type="button"
                 data-toggle="modal"
                 data-dismiss="modal"
@@ -373,9 +373,9 @@ function ConnectModal(props) {
                     style={{ width: "32px" }}
                   ></img>
                 </span>
-              </HButton>
+              </button>
 
-              <HButton
+              <button
                 type="button"
                 data-toggle="modal"
                 data-target="#exampleModalCenterLonin"
@@ -392,9 +392,9 @@ function ConnectModal(props) {
                     style={{ width: "32px" }}
                   ></img>
                 </span>
-              </HButton>
+              </button>
 
-              <HButton
+              <button
                 type="button"
                 data-toggle="modal"
                 data-target="#exampleModalCenterLonin"
@@ -412,7 +412,7 @@ function ConnectModal(props) {
                     style={{ width: "32px", borderRadius: "999px" }}
                   ></img>
                 </span>
-              </HButton>
+              </button>
             </div>
           </div>
         </div>
