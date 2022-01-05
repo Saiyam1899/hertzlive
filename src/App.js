@@ -17,8 +17,8 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={SwapTradePage} />
-          {/* <Route path="/info" component={InfoPage} />
-        <Route path="/farms" component={FarmsPage} /> */}
+          <Route path="/info" component={InfoPage} />
+          <Route path="/farms" component={FarmsPage} />
         </Switch>
         <Footer />
         {/* <Layout2>
@@ -30,7 +30,6 @@ function App() {
         </Switch>
       </Layout2> */}
       </div>
-
     </>
   );
 }

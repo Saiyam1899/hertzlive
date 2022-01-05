@@ -9,9 +9,10 @@ export const _2FAuthenticationModal = (props) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          width: "400px",
           height: "100%",
           flexDirection: "column",
-          padding: "10px",
+          padding: "20px",
         }}
       >
         <div
@@ -24,13 +25,14 @@ export const _2FAuthenticationModal = (props) => {
           <span style={{ margin: "0 auto" }}>
             <img
               src="https://hertz-network.com/wp-content/uploads/elementor/thumbs/HTZ-logo-only-blue-white-p4p2ldidtq3ndb8678kf2snlwefybhkycazbj9e3gk.png"
-              style={{ paddingBottom: "10px" }}
+              style={{ paddingBottom: "20px" }}
             />{" "}
             <h2
               style={{
                 color: "white",
                 fontSize: "26px",
                 fontWeight: "500",
+                paddingBottom: "10px",
               }}
             >
               2FA Confirmation
@@ -86,7 +88,7 @@ export const _2FAuthenticationModal = (props) => {
               props.TwoFactorAuthentication(props.code);
             }}
           >
-            Confirm
+            Login
           </button>
           <button
             style={{
@@ -102,7 +104,7 @@ export const _2FAuthenticationModal = (props) => {
             }}
             onClick={props.is2FAvisableChanged}
           >
-            Cancel
+            Register
           </button>
         </div>
         <div style={{ margin: "15px 0px 0px", color: "white" }}></div>

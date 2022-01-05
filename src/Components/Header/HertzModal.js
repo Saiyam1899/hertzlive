@@ -18,8 +18,14 @@ export const HertzModal = (props) => {
             class="modal-content"
             style={{
               background: "#032b5b",
-              padding: "16px",
+              paddingTop: "20px",
+              paddingBottom: "20px",
+              paddingLeft: "10px",
+              paddingRight: "10px",
+              margin: "0 auto",
+
               borderRadius: "23px",
+              width: "400px",
               color: "#fff",
               letterSpacing: "1px",
             }}
@@ -47,13 +53,21 @@ export const HertzModal = (props) => {
                       display: "flex",
 
                       width: "100%",
+                      padding: "20px",
                     }}
                   >
-                    <span style={{ margin: "0 auto" }}>
+                    <div
+                      style={{
+                        margin: "0 auto",
+                        marginLeft: "120px",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
                       <img
                         src="https://hertz-network.com/wp-content/uploads/elementor/thumbs/HTZ-logo-only-blue-white-p4p2ldidtq3ndb8678kf2snlwefybhkycazbj9e3gk.png"
                         style={{ paddingBottom: "10px" }}
-                      />{" "}
+                      />
                       <h2
                         style={{
                           color: "white",
@@ -63,8 +77,8 @@ export const HertzModal = (props) => {
                       >
                         Login
                       </h2>
-                    </span>
-                    <span>
+                    </div>
+                    <div>
                       <MdOutlineCancel
                         data-dismiss="modal"
                         aria-label="Close"
@@ -73,7 +87,7 @@ export const HertzModal = (props) => {
                       >
                         <span aria-hidden="true">&times;</span>
                       </MdOutlineCancel>
-                    </span>
+                    </div>
                   </div>
 
                   <input

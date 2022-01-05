@@ -112,14 +112,17 @@ class Header extends Component {
   render() {
     return (
       <>
-        <div style={{ backgroundColor: "#002853" }}>
+        <div style={{ backgroundColor: "#002853"}}>
           <div
             className="container-fluid px-md-1"
             style={{ overflowX: "hidden" }}
           >
             <div className="row">
               <div className="col-md-12 col-12">
-                <nav className="navbar navbar-expand-lg navbar-light">
+                <nav
+                  className="navbar navbar-expand-lg navbar-light"
+                  style={{ maxHeight: "76px", height: "100%" }}
+                >
                   <a
                     className="navbar-brand"
                     href="https://defi.hertz-network.com"
@@ -318,7 +321,7 @@ class Header extends Component {
 function ConnectModal(props) {
   return (
     <>
-           <div
+      <div
         class="modal fade"
         id="ConnectModal"
         tabindex="-1"
@@ -671,9 +674,6 @@ const HButton = styled.button`
   transition: 0.2s;
   border: none;
   font-weight: bold;
-  :hover {
-    border: 3px solid #26c5eb !important;
-  }
 `;
 const NavLink = styled(Link)`
   color: #fff !important;

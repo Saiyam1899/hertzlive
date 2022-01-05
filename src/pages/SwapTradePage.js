@@ -123,45 +123,42 @@ class TradePage extends Component {
               {/* Main container  */}
 
               <MainWrapper>
-                <RowWrapper>
-                  {/* <div data-toggle="modal" data-target="#exampleModalCenter">
+                <div>
+                  <div>
                     <div
-                      style={{
-                        color: "#26c5eb",
-                        cursor: "pointer",
-                      }}
+                      data-toggle="modal"
+                      data-target="#TranscationModalCenter"
+                      style={{ display: "flex" }}
                     >
-                      <IoMdSettings size={25} />
-                    </div>
-                  </div> */}
-                  <div class="col">
-                    <div>
-                      <h5 style={{ fontWeight: "bold", color: "#26c5eb" }}>
+                      <h5
+                        style={{
+                          color: "#26c5eb",
+
+                          display: "flex",
+                          flex: 1,
+                          justifyContent: "center",
+                          marginLeft: "15px",
+                        }}
+                      >
                         HTZ Bridge
                       </h5>
+                      <div
+                        style={{
+                          color: "#6698cd",
+                        }}
+                      >
+                        <MdWatchLater size={25} color="#6698cd" />
+                      </div>
                     </div>
                   </div>
-                  <div
-                    data-toggle="modal"
-                    data-target="#TranscationModalCenter"
-                  >
-                    <div
-                      style={{
-                        color: "#6698cd",
-                      }}
-                    >
-                      <MdWatchLater size={25} />
-                    </div>
-                  </div>
-                </RowWrapper>
+                </div>
+
                 <FarmWrapper>
-                  <div style={{ display: "flex", fontWeight: "bold" }}>
-                    Your Swap
-                  </div>
+                  <div style={{ textAlign: "start" }}>Your Swap</div>
                   <InputContainer>
                     <div>
                       <RowWrapper>
-                        <span>From</span>
+                        <span style={{ textAlign: "start" }}>From</span>
                       </RowWrapper>
                       {this.props.isTradeDisabled ? (
                         <RowInputWrapper>
@@ -221,15 +218,9 @@ class TradePage extends Component {
                   {/* Swap icon  */}
 
                   <div>
-                    <div>
-                      <FaArrowAltCircleDown
-                        size={20}
-                        style={{
-                          color: "#26c5eb",
-                          backgroundColor: "white",
-                          border: "none",
-                          borderRadius: "999px",
-                        }}
+                    <div className="cz-color-16777215">
+                      <i
+                        class="fad fa-arrow-alt-circle-down fa-2x text-center text-white cz-color-16777215"
                         onClick={
                           this.props.isSwapCurrerncyDisabled
                             ? null
@@ -240,7 +231,7 @@ class TradePage extends Component {
                                 );
                               }
                         }
-                      />
+                      ></i>
                     </div>
                   </div>
 
@@ -338,10 +329,11 @@ class TradePage extends Component {
                                 color: this.props.isSwapDisabled.condition
                                   ? "grey"
                                   : "black",
-                                fontWeight: "bold",
+
                                 cursor: this.props.isSwapDisabled.condition
                                   ? "default"
                                   : "pointer",
+                                fontSize: "18px",
                               }}
                               id="swappingBtn"
                               disabled={this.props.isSwapDisabled.condition}
@@ -733,13 +725,14 @@ const Wrapper = styled.div`
 
 const HeadingWrapper = styled.div`
   background: transparent;
-  padding: 14px 0;
+  
   margin-bottom: 0 ;
 }
 `;
 const MainWrapper = styled.div``;
 const RowWrapper = styled.div`
   display: flex;
+  text-align: "center";
 `;
 const FarmWrapper = styled.div`
   color: #fff;
